@@ -43,11 +43,11 @@ spec:
           protocol: TCP
         volumeMounts:
         - mountPath: /var/lib/mysql
-          name: mysql-storage
+          name: banco-wp
       volumes:
-      - name: mysql-storage
+      - name: banco-wp
         persistentVolumeClaim:
-          claimName: mysql-storage
+          claimName: banco-wp
 ---
 apiVersion: v1
 kind: Service
@@ -107,11 +107,11 @@ spec:
           protocol: TCP
         volumeMounts:
         - mountPath: /var/www/html
-          name: wordpress-storage
+          name: site-wp
       volumes:
-      - name: wordpress-storage
+      - name: site-wp
         persistentVolumeClaim:
-          claimName: wordpress-storage
+          claimName: site-wp
 ---
 apiVersion: v1
 kind: Service
