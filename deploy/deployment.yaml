@@ -98,11 +98,6 @@ spec:
             secretKeyRef:
               key: mysql-password
               name: mysql-secrets
-        - name: WORDPRESS_DB_USER
-          valueFrom:
-            secretKeyRef:
-              key: mysql-user
-              name: mysql-secrets
         image: ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE}
         imagePullPolicy: Always
         name: wordpress
