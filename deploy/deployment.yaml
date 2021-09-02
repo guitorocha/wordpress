@@ -135,7 +135,7 @@ metadata:
   name: wordpress
 spec:
   rules:
-  - host: wordpress.devops.35.198.47.184.sslip.io/
+  - host: wordpress.devops.35.198.47.184.sslip.io
     http:
       paths:
       - backend:
